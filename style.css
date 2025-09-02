@@ -18879,6 +18879,10 @@ section {
       color: #fff;
       position: relative;
     } */
+	
+	nav.navbar.navbar-expand-lg.custom-navbar>.container {
+    max-width: 100%;
+} 	
 	.hero {
     /* background: url('tr-bg.jpg') no-repeat center center/cover; */
     /* background: url('tr-bg-01.jpg') no-repeat center center/cover; */
@@ -19674,11 +19678,33 @@ display:none;
 	nav.navbar.navbar-expand-lg.custom-navbar .container button.navbar-toggler {
 		background: #ffffff;
 	}
+	.overview-section {
+		max-width: 1000px;
+		margin: auto;
+		padding-top: 40px;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	
+	.service-container .service-image {
+		display: none !important;
+	}
+
+	.map-section {
+		margin-top: 30px;
+		width: 100%;
+	}
+	
+	.hero-section {
+		background: url('truck_updated-banner.jpeg') no-repeat center center/cover;
+		background-position: -300px 0;
+	}
+
 	div#navMenu {
 		position: absolute;
 		top: 100px;
 		background: #ffffff;
-		width: 100%;
+		width: 95%;
 		border-radius: 10px;
 	}
 	div#navMenu ul li a.nav-link {
@@ -19695,8 +19721,15 @@ display:none;
     gap: 0 !important;
 	}
 	div#navMenu div.btn.btn-success.ms-lg-3.quick-btn {
-		display: none;
+		/* display: none; */
+		margin-left: 20px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        width: 95%;
 	}
+	div#navMenu div.btn.btn-success.ms-lg-3.quick-btn .dropdown ul.dropdown-menu.show {
+    width: 100%;
+}
 	nav.navbar.navbar-expand-lg.custom-navbar .container {
 		position: relative;
 		width: 100% !important;
@@ -19742,13 +19775,25 @@ div#accordionExample {
 }
 
 /* Pricing cards */
-.pricing-card-new {
+/* .pricing-card-new {
   background: #fff;
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+} */
+.best-value {animation: none !important;}
+.pricing-card-new {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: pulse 1.5s infinite;
+    border: 2px solid #eecfcf;
 }
+
+
 .pricing-card-new:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -19805,7 +19850,7 @@ div#accordionExample {
     color: #d50017;
     margin-right: 8px;
 }
-.third .plan-features i {
+ .best-value i {
     color: #fff;
     margin-right: 8px;
 }
@@ -19940,3 +19985,39 @@ div#accordionExample {
 	/*********************************/
 	/*********************************/
 	/*********************************/
+	
+	
+.ribbon {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    right: 8px;
+    pointer-events: none;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 200px;
+  padding: 10px 0;
+  background: linear-gradient(45deg, #cf9400, #f6d100);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  transform: rotate(45deg);
+  top: 30px;
+  right: -40px;
+  font-size: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  animation: pulse 1.5s infinite;
+  z-index:6;
+}
+
+/* Animation for highlight */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
